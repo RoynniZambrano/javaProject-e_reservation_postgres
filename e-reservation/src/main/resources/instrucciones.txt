@@ -1,0 +1,10 @@
+
+
+
+
+ejecutar una contenedor con postgres para que la app se conecte
+docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=platzi postgres:9.6.6-alpine
+
+
+ejecutar un contenedor de la image de la app.
+ docker run -d --name ereservation  --add-host=localhost:192.168.99.100 -p 8080:8080 roydocker2019/e-reservation:latest
